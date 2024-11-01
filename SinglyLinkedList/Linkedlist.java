@@ -26,6 +26,18 @@
             System.out.print(c.data + "-> ");
             c =c.next;
         }
+        System.out.println();
+    }
+
+    public void insertEnd(int data){
+        Node newNode =new Node(data);
+        Node c = head;
+ 
+            while(c.next!=null){
+                c= c.next;
+            }
+            c.next=newNode;
+        
     }
 
 
@@ -41,8 +53,10 @@
             l.insertAtBegin(a[i]);
 
         }
-        
         l.display();
+        l.insertEnd(1);
+        l.display();
+    
 
     }
 
