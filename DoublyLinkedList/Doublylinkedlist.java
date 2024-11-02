@@ -16,52 +16,52 @@ public class Doublylinkedlist {
             this.next = null;
         }
     }
-
-    void insert(int data) {
-        Node newNode = new Node(data);
-
-        if (head == null) {
-            tail = newNode;
-        }
-        head = tail;
-        tail.next = null;
-        tail.prev = null;
-    }
-
-    void printNodes() {
+    void display() {
+        int count = 0;
 
         if (head == null) {
             System.out.println("Emptyt List");
         } else {
             Node current = head;
             while (current != null) {
-                System.out.println(current.data);
+                System.out.print(current.data+ " -> ");
                 current = current.next;
+                count++;
             }
 
         }
+        System.out.println("\nTotal no of nodes are : "+ count);
     }
+
+
+
 
     void insertAtBeginning(int data) {
         Node newNode = new Node(data);
-        if (head == null) {
-            tail = newNode;
-        } else {
-            head.prev = newNode;
-        }
-        newNode.next = head;
+        if(head == null){
         head = newNode;
+        tail = newNode;
+    }
+        else{
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+
+        }
     }
 
-    void insertAtEnd(int data) {
+    void insertEnd(int data) {
         Node newNode = new Node(data);
-        if (head == null)
+        if (head == null){
             head = newNode;
+            tail = newNode;
+        }
         else {
             tail.next = newNode;
             newNode.prev = tail;
+            tail = newNode;
         }
-        tail = newNode;
+       
     }
 
     void deleteFirst() {
@@ -99,13 +99,13 @@ public class Doublylinkedlist {
     public static void main(String args[]) {
 
         Doublylinkedlist l = new Doublylinkedlist();
-        l.insert(5);
-        l.insertAtBeginning(7);
-        l.insertAtBeginning(6);
-        l.insertAtEnd(8);
-        l.insertAtEnd(9);
-        l.deleteLast();
-        l.printNodes();
+        l.insertAtBeginning(4);
+        l.display();
+        l.insertAtBeginning(8);
+        l.display();
+        l.insertEnd(6);
+        l.display();
+
 
     }
 }
