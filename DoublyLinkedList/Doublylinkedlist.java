@@ -132,11 +132,11 @@ public class Doublylinkedlist {
         
         l.insertAtBeginning(8);
         l.display();
-        l.insertPos(6,3);
+        l.insertAtBeginning(9);
         l.display();
-        l.deleteLast();
+        l.insertAtBeginning(2);
         l.display();
-       
+    
 
 
     }
