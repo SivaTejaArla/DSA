@@ -2,22 +2,43 @@ package Stack;
 public class Stackarray {
     
 int top=-1;
+static   int[] a=new int[3];
+void push(int data){
 
-void push(int data, int[] a){
+    if(top == a.length-1)
+    {
+        System.out.println("Stack Full ");
+        return;
+    }
     top++;
     a[top]=data;
 }
-void pop(int[] a){
+void pop(){
+if(top<0){
+    System.out.println("Empty Stack");
+    return;
+}
+
 int res=a[top];
+a[top] = 0;
 top--;
 System.out.println("Popped  : " +res);
 }
+void display(){
+    for(int t =0 ;t< a.length;t++){
+        System.out.print(a[t]+ " ");
+    }
+    System.out.println();
+}
     public static void main(String[] args) {
-        int[] a=new int[3];
         Stackarray l=new Stackarray();
-        l.push(5,a);
-        l.push(7, a);
-        l.pop(a);
-
+        l.push(5);
+        l.push(7);
+        l.push(3);
+        l.display();
+        l.pop();
+        l.display();
+        l.pop();
+        l.display();
     }
 }
