@@ -18,14 +18,13 @@ if(top<0){
     System.out.println("Empty Stack");
     return;
 }
-
 int res=a[top];
 a[top] = 0;
 top--;
 System.out.println("Popped  : " +res);
 }
 void display(){
-    for(int t =0 ;t< a.length;t++){
+    for(int t =0 ;t< top+1;t++){
         System.out.print(a[t]+ " ");
     }
     System.out.println();
