@@ -19,7 +19,6 @@ if(top<0){
     return;
 }
 int res=a[top];
-a[top] = 0;
 top--;
 System.out.println("Popped  : " +res);
 }
