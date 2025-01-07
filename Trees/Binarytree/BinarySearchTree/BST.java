@@ -2,9 +2,7 @@ import java.util.*;
 
 class BST {
 
-
     static Node root;
-
 
     static class Node {
         int data;
@@ -41,32 +39,37 @@ class BST {
         return root;
     }
 
+    public static void inOrder(Node root) {
 
-    public static  void inOrder(Node root){
-
-        if(root == null ){
-            return ;
+        if (root == null) {
+            return;
         }
 
         inOrder(root.left);
-        System.out.print(root.data+ " ");
+        System.out.print(root.data + " ");
         inOrder(root.right);
 
-
     }
+
     public static void main(String args[]) {
 
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the 'n' calue : ");
+        int n = s.nextInt();
 
-        int[] a = { 3, 6, 8, 4, 99, 42 };
+        int[] a = new int[n];
+        System.out.println("Enter the numbers : ");
+        for (int i = 0; i < n; i++) {
+            a[i] = s.nextInt();
+
+        }
 
         for (int x : a) {
-         root = insert(root, x);
+            root = insert(root, x);
         }
         System.out.println("Inserted");
 
         inOrder(root);
-
-
 
     }
 }
