@@ -50,8 +50,25 @@ class BST {
         inOrder(root.right);
 
     }
+static boolean searchKey(Node root , int key ){
 
+    if (root == null ){
+        return false;
+    }
+
+    if(root.data< key){
+        return searchKey(root.right, key);
+    }
+    else if( root.data == key){
+        return true;
+    }else{
+         return searchKey(root.left, key);
+    }
+}
     public static void main(String args[]) {
+
+
+        boolean isFound= false;
 
         Scanner s = new Scanner(System.in);
         System.out.println("Enter the 'n' calue : ");
@@ -70,6 +87,14 @@ class BST {
         System.out.println("Inserted");
 
         inOrder(root);
+        isFound = searchKey(root, 6);
+
+        if (isFound) {
+            System.out.println("Key Found");
+        } else {
+            System.out.println("Key Not Found");
+        }
+        
 
     }
 }
