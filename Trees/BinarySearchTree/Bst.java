@@ -1,6 +1,8 @@
+package BinarySearchTree;
+
 import java.util.*;
 
-class BST {
+public class Bst {
 
     static Node root;
 
