@@ -2,24 +2,22 @@ import java.util.Scanner;
 
 public class NthLast {
 
+    static Node head;
 
-static Node head;
-
-static int count = 0;
-
+    static int count = 0;
 
     static class Node {
 
         int data;
-         Node next;
-          public Node(int data ){
+        Node next;
+
+        public Node(int data) {
 
             this.data = data;
-          }
+        }
 
     }
 
-    
     static void insert(int val) {
 
         Node newNode = new Node(val);
@@ -36,6 +34,7 @@ static int count = 0;
         }
         curr.next = newNode;
     }
+
     static void display(Node head) {
 
         Node curr = head;
@@ -44,33 +43,29 @@ static int count = 0;
             System.out.print(curr.data + "\t");
             count++;
             curr = curr.next;
-            
+
         }
         System.out.println();
     }
 
-    static int getNode(int k){
+    static int getNode(int k) {
 
-
-        int pos = count -k;
+        int pos = count - k;
         Node curr = head;
 
         int itr = 1;
 
-        while(itr <= pos){
+        while (itr <= pos) {
             curr = curr.next;
-            itr ++;
+            itr++;
         }
 
         return curr.data;
 
-
-
-
     }
 
     public static void main(String[] args) {
-           Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in);
         System.out.println(" Enter the number of  nodes : ");
         int n = s.nextInt();
         int[] a = new int[n];
@@ -86,11 +81,9 @@ static int count = 0;
         System.out.println(" Enter the value of n from last node:  ");
         int k = s.nextInt();
 
-   int res =  getNode(k);
-        
-   
-   System.out.println("The  "+k+" th node is : " + res);
+        int res = getNode(k);
 
+        System.out.println("The  " + k + " th node is : " + res);
 
     }
 }
