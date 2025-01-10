@@ -1,20 +1,25 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class RemoveDup {
+public class NthLast {
 
-    static Node head;
+
+static Node head;
+
+static int count = 0;
+
 
     static class Node {
 
         int data;
-        Node next;
+         Node next;
+          public Node(int data ){
 
-        public Node(int data) {
             this.data = data;
-        }
+          }
 
     }
 
+    
     static void insert(int val) {
 
         Node newNode = new Node(val);
@@ -31,44 +36,41 @@ public class RemoveDup {
         }
         curr.next = newNode;
     }
-
     static void display(Node head) {
 
         Node curr = head;
         System.out.println(" Nodes : ");
         while (curr != null) {
             System.out.print(curr.data + "\t");
+            count++;
             curr = curr.next;
             
         }
         System.out.println();
     }
 
-    static void deleteDup() {
+    static int getNode(int k){
 
+
+        int pos = count -k;
         Node curr = head;
 
-        while (curr != null) {
-            Node runner = curr.next;
-            Node prev = curr;
+        int itr = 1;
 
-            while (runner != null) {
-                if (curr.data == runner.data) {
-                    prev.next = runner.next; // Skip the duplicate node by linking 'prev' to 'runner.next'
-                } else {
-                    prev = runner; // If no duplicate, move 'prev' forward to the 'runner' node
-                }
-
-                runner = runner.next;
-            }
-
+        while(itr <= pos){
             curr = curr.next;
+            itr ++;
         }
+
+        return curr.data;
+
+
+
 
     }
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+           Scanner s = new Scanner(System.in);
         System.out.println(" Enter the number of  nodes : ");
         int n = s.nextInt();
         int[] a = new int[n];
@@ -81,8 +83,14 @@ public class RemoveDup {
             insert(x);
         }
         display(head);
-        deleteDup();
-        display(head);
+        System.out.println(" Enter the value of n from last node:  ");
+        int k = s.nextInt();
+
+   int res =  getNode(k);
+        
+   
+   System.out.println("The  "+k+" th node is : " + res);
+
 
     }
 }
