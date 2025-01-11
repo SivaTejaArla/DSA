@@ -52,6 +52,16 @@ public class Bst {
 
     }
 
+    static int findHeight(Node root) {
+        if (root == null)
+            return -1;
+
+        int l = findHeight(root.left); // left height
+        int r = findHeight(root.right); // right height
+
+        return 1 + Math.max(l, r); // 1 is include to add root also
+    }
+
     static boolean searchKey(Node root, int key) {
 
         if (root == null) {
@@ -65,6 +75,28 @@ public class Bst {
         } else {
             return searchKey(root.left, key);
         }
+    }
+
+    public static void postOrder(Node root) {
+
+        if (root == null) {
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.data + " ");
+
+    }
+
+    public static void preOrder(Node root) {
+
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        postOrder(root.left);
+        postOrder(root.right);
+
     }
 
     static Node deleteNode(Node root, int val) {
@@ -144,6 +176,15 @@ public class Bst {
         }
         deleteNode(root, 7);
         inOrder(root);
+        System.out.println();
+        System.out.println("Preorder : ");
+        preOrder(root);
+        System.out.println();
+        System.out.println("Post Order : ");
+        postOrder(root);
+        System.out.println();
+
+        System.out.println("Height of the tree is : " + findHeight(root));
 
     }
 }
