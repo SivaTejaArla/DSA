@@ -155,13 +155,38 @@ public class Bst {
         return root;
     }
 
+    static int findMin(Node root) {
+
+        if (root == null)
+            return Integer.MIN_VALUE;
+        if (root.left == null) {
+            return root.data;
+        }
+
+        return findMin(root.left);
+
+    }
+
+    static int findMax(Node root) {
+
+        if (root == null)
+            return Integer.MAX_VALUE;
+
+        if (root.right == null) {
+            return root.data;
+        }
+
+        return findMax(root.right);
+
+    }
+
     public static void main(String args[]) {
 
         boolean isFound = false;
 
         Scanner s = new Scanner(System.in);
 
-        int[] a = { 3, 7, 5, 6, 9, 31, 1, 2 };
+        int[] a = { 3, 7, 5, 6, 9, 31, 11, 2, 44 };
         for (int x : a) {
             root = insert(root, x);
         }
@@ -185,6 +210,8 @@ public class Bst {
         System.out.println();
 
         System.out.println("Height of the tree is : " + findHeight(root));
+        System.out.println("Min value in the tree is : " + findMin(root));
+        System.out.println("Max value in the tree is : " + findMax(root));
 
     }
 }
