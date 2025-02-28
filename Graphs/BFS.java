@@ -49,6 +49,21 @@ public void breadthFirstSearch(int start){
 
 }
 
+/*   Queue        
+ offer  is usedd to push    i.e, enqueue
+ poll is used pop     i.e, dequeue
+ * 
+ * 
+Method	Description
+add(E e)	Inserts an element into the queue. Throws an exception if the queue is full.
+offer(E e)	Inserts an element into the queue. Returns false if the queue is full (preferred over add).
+remove()	Removes and returns the head of the queue. Throws NoSuchElementException if the queue is empty.
+poll()	Removes and returns the head of the queue. Returns null if the queue is empty.
+element()	Retrieves the head of the queue without removing it. Throws NoSuchElementException if empty.
+peek()	Retrieves the head of the queue without removing it. Returns null if empty.
+
+ * 
+ */
 
     public static void main(String[] args) {
 
