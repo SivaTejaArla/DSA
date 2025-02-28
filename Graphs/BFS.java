@@ -32,17 +32,17 @@ public void breadthFirstSearch(int start){
     Queue<Integer> q =new LinkedList<>();
      Set<Integer> visited = new HashSet<>(); // Set to track visited nodes
      visited.add(start);
-     q.offer(start);
+     q.offer(start);        // First make the start node as visited
      System.out.println("BFS Traversal starting from node " + start + ":");
      while(!q.isEmpty()){
-        int curr = q.poll();
+        int curr = q.poll();        //Print Curr node
         System.out.print(curr + " ");
 
 
         for(int neighbor : a.get(curr)){
             if(!visited.contains(neighbor)){
-                visited.add(neighbor);
-                q.offer(neighbor);
+                visited.add(neighbor);  // Make the neighbours to be visited   
+                q.offer(neighbor);      // Adding neignbours to queue 
             }
         }
      }
