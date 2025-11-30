@@ -29,7 +29,7 @@ public class BinarySearch {
     }
 
     public static void main(String args[]) {
-        int[] a = { 2, 4, 3, 6, 8, 9, 11, 32, 21 };
+        int[] a = { 2, 4, 3, 6, 8, 9, 11, 32, 21   };
         Arrays.sort(a);
 
         System.out.println(search(a, 19, 0, a.length - 1));

@@ -30,9 +30,8 @@ public class Bubblesort{
        System.out.println(Arrays.toString(a));
     }
     public void bubbleSort(int[] a){
-        int n = a.length-1;
-        for(int i =0 ;i<n;i++){
-            for(int j =0;j<n;j++)
+        for(int i =0 ;i<a.length-1;i++){
+            for(int j =0;j<a.length-1;j++)
             {
                 if(a[j]>a[j+1]){            //Swapping without temp
                     a[j] +=a[j+1];
@@ -42,12 +41,33 @@ public class Bubblesort{
             }
         }
     }
+
+
+public void bubbleSortRecursion(int[] a ,int n){
+
+if(n==1) return;
+    for(int i = 0 ; i < a.length-1 ; i++){
+        if(a[i] > a[i+1]){
+            a[i] +=a[i+1];
+            a[i+1] = a[i] - a[i+1]; 
+            a[i] = a[i] - a[i+1];
+        }
+    }
+bubbleSortRecursion(a,n-1);
+
+}
+
+
     public static void main(String[] args) {
         Bubblesort b = new Bubblesort();
         int[] a = {1,7,5,9,3,2,11,67,34 };
+                int[] aa = {1,7,5,9,3,2,11,67,34 };
+
         b.printArray(a);
         b.bubbleSort(a);
         b.printArray(a);
+        b.bubbleSortRecursion(aa, aa.length);
+        b.printArray(aa);
 
 
     }
