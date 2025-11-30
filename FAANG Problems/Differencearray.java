@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Differencearray {
 
     public int[] differArray(int[] a, int[] q) {
-
         int[] dif = new int[a.length];
         dif[0] = a[0];
         for (int i = 1; i < a.length; i++)
@@ -20,7 +19,6 @@ public class Differencearray {
             sum += dif[i];
             a[i] = sum;
         }
-
         return a;
     }
 
@@ -29,7 +27,7 @@ public class Differencearray {
 
         int[] a = { 2, 4, 5, 3, 7, 1, 4 };
         System.out.println("Initial Array :" + Arrays.toString(a));
-        int[] q = { 0,4,2 };
+        int[] q = { 0, 4, 2 };
         System.out.println("Query Array :" + Arrays.toString(q));
 
         int[] res = d.differArray(a, q);
