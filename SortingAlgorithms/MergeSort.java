@@ -1,5 +1,32 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
+
+/*
+✅ Merge Sort – Easy Bullet Points
+🔹 Step 1: Split
+
+    Take the list.
+
+    Divide it into two halves.
+
+    Keep splitting each half again.
+
+    Stop when every piece has 1 element.
+
+🔹 Step 2: Merge
+
+    Start merging the small pieces back together.
+
+    While merging, compare numbers and place them in sorted order.
+
+    Merge small sorted pieces into bigger sorted pieces.
+
+    Continue until the whole list is merged.
+
+🔹 Final Result
+
+    The fully merged list becomes sorted.
+*/
+
+
 import java.util.*;
 class MergeSort {
     private static void merge(int [] a , int l , int mid , int r){
