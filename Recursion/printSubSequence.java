@@ -24,9 +24,27 @@ static void printSubSeq(String p, String up){
      printSubSeq(p, up.substring(1)); // ignore next character
     
 }
+    
+static ArrayList<String> printSubSeqArray(String p, String up ){
+    if(up.isEmpty()) {
+       ArrayList<String> x= new  ArrayList<String>();
+       x.add(p);
+        return x;
+    }
+    char ch = up.charAt(0); 
+    
+   ArrayList<String> right=  printSubSeqArray(p+ch, up.substring(1));
+   ArrayList<String> left=      printSubSeqArray(p, up.substring(1));
+     
+     
+     right.addAll(left); 
+     return right; 
+    
+}
     public static void main(String[] args) {
         
         printSubSeq("","abc");
+      System.out.println(  printSubSeqArray("","abc"));
     
     }
 }
