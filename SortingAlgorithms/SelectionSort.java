@@ -1,5 +1,23 @@
 package SortingAlgorithms;
 
+/*
+Selection sort works by shifting largest element to the last of the array or smallest to first of array,
+some what similar to bubble sort
+++ Let first index as  min Index
+++ Compare with adjacent element(j) or (i+1) if it is min then  min_index = j
+++ Swap arr[i] and arr[min_index] 
+
+| Loop (i) | Unsorted Part        | Smallest Found | Swap Performed | Result After Loop        |
+| -------- | -------------------- | -------------- | -------------- | ------------------------ |
+| **0**    | [29, 10, 14, 37, 14] | 10             | Swap 29 ↔ 10   | **[10, 29, 14, 37, 14]** |
+| **1**    | [29, 14, 37, 14]     | 14             | Swap 29 ↔ 14   | **[10, 14, 29, 37, 14]** |
+| **2**    | [29, 37, 14]         | 14             | Swap 29 ↔ 14   | **[10, 14, 14, 37, 29]** |
+| **3**    | [37, 29]             | 29             | Swap 37 ↔ 29   | **[10, 14, 14, 29, 37]** |
+| **4**    | [37]                 | 37             | No swap        | **[10, 14, 14, 29, 37]** |
+
+
+
+*/
 public class SelectionSort {
     void sort(int arr[])
     {
