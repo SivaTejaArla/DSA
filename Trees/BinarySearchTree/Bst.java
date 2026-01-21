@@ -77,25 +77,26 @@ public class Bst {
         }
     }
 
+     public static void preorder(Node root) {
+
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.data + " ");
+        preorder(root.left);
+        preorder(root.right);
+
+    }
+
     public static void postOrder(Node root) {
 
         if (root == null) {
             return;
         }
+       
         postOrder(root.left);
         postOrder(root.right);
-        System.out.print(root.data + " ");
-
-    }
-
-    public static void preOrder(Node root) {
-
-        if (root == null) {
-            return;
-        }
-        System.out.print(root.data + " ");
-        postOrder(root.left);
-        postOrder(root.right);
+         System.out.print(root.data + " ");
 
     }
 
