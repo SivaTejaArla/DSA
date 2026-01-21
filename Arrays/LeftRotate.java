@@ -61,14 +61,12 @@ class LeftRotate {
      *  2. INTEGER_ARRAY arr
      */
 
+
     public static List<Integer> rotateLeft(int d, List<Integer> arr) {
-        List<Integer> result = new ArrayList<>();
-    for(int i =d ; i<arr.size();i++){
-        result.add(arr.get(i));
-    }
-        for(int i =0 ; i<d;i++){
-        result.add(arr.get(i));
-    }
+        List<Integer> result = new ArrayList<>(arr.size());
+    
+    result.addAll(arr.subList(d, arr.size()));
+    result.addAll(arr.subList(0, d));
     return result;
     }
 
