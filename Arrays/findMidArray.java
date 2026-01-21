@@ -7,8 +7,6 @@ Write a function called middle that takes an array and returns a new array that 
     Arrays.copyOfRange(array,startIndexToBeIncluded,lastIndexToBeIncluded)
 */
 
-
-
 import java.util.Arrays;
 public class findMidArray {
     public static int[] middle(int[] array) {
