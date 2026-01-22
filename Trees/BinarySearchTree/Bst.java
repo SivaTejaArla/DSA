@@ -16,6 +16,34 @@ public class Bst {
 
     }
 
+static void insertWithVoid(int data){
+        Node newNode = new Node(data);
+        if(root == null ) {
+            root = newNode;
+            return;
+        }
+        Node current = root;
+       while(true){
+           
+           if(data < current.data){
+               if(current.left == null) {
+                   current.left = newNode;
+                   break;
+               }
+               current = current.left;
+           }else{
+               if(current.right == null) {
+                   current.right = newNode;
+                   break;
+               }
+               current = current.right;
+           }
+       }
+       
+       System.out.println("Inserted");
+        
+    }
+    
     public static Node insert(Node root, int val) {
 
         if (root == null) {
