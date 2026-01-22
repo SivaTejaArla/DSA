@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Bst {
-
     
     static Node root;
 
