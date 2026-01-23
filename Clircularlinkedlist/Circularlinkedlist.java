@@ -62,6 +62,7 @@ public boolean isEmpty(){
         }
         length++;
     }
+    
     void removeFirst(){
         if(isEmpty()){
             System.out.println("Empty list");
