@@ -10,6 +10,7 @@ public class Circularlinkedlist {
         int data;
         Node next;
 
+        
         public Node(int data) {
             this.data = data;
         }
