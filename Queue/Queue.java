@@ -36,6 +36,7 @@ void dequeue(){
     System.out.println("Popped : " +result);
     
 }
+    
     public static void main(String[] args) {
         Queue l=new Queue();
         l.Enqueue(1);
