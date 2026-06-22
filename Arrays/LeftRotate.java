@@ -96,7 +96,5 @@ public class Solution {
             + "\n"
         );
 
-        bufferedReader.close();
-        bufferedWriter.close();
     }
 }
