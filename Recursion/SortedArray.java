@@ -2,7 +2,6 @@ package Recursion;
 
 //In this problem we will check if an array is sorted using recursion.
 public class SortedArray {
-
     static boolean isSortedBack(int a[], int i, int j) { // checking from back of array
         if (a.length == 0)
             return false;
