@@ -1,6 +1,5 @@
 package Queue;
 
-
 public class Queue {
     
 private Node front;
