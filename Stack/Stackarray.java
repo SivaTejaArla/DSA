@@ -26,6 +26,7 @@ void display(){
     for(int t =0 ;t< top+1;t++){
         System.out.print(a[t]+ " ");
     }
+    
     System.out.println();
 }
     public static void main(String[] args) {
