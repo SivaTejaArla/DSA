@@ -5,6 +5,8 @@ int top=-1;
 static   int[] a=new int[3];
 void push(int data){
 
+
+    
     if(top == a.length-1)
     {
         System.out.println("Stack Full ");
