@@ -29,6 +29,7 @@ void display(){
     
     System.out.println();
 }
+    
     public static void main(String[] args) {
         Stackarray l=new Stackarray();
         l.push(5);
