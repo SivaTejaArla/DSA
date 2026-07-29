@@ -5,7 +5,6 @@
 
     private Node head;
 
-
     private class Node{
         Node next;
         int data;
