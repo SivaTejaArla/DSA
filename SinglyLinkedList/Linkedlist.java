@@ -2,7 +2,6 @@
  import java.util.*;
 
  class Linkedlist{
-
     private Node head;
     private class Node{
         Node next;
