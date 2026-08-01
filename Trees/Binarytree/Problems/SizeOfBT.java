@@ -40,6 +40,11 @@ static void findSize(Node  root){
    findSize(root.right);
 }
 
+static int findSizeRecursion(Node  root){
+   if(root == null) return 0;
+
+   return 1+findSizeRecursion(root.left)+findSizeRecursion(root.right);
+}
 
 
     public static void main(String[] args) {
@@ -58,6 +63,8 @@ static void findSize(Node  root){
 
         findSize(root);
         System.out.println(count);
+             System.out.println("Using Recursion : "+findSizeRecursion(root));
+
 
     }
 
