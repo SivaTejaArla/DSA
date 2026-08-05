@@ -3,7 +3,6 @@ package Binarytree;
 import java.util.Stack;
 
 public class Binarytree {
-
     private static Node root;
      private class Node{
 
