@@ -1,5 +1,4 @@
 package Binarytree;
-
 import java.util.Stack;
 
 public class Binarytree {
