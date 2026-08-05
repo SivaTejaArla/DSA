@@ -13,13 +13,13 @@ public class Binarytree {
             this.data=data;
         }
      }
+    
 void createTree(){
-
-Node first =new Node(1);
-Node second = new Node(2);
-Node third = new Node(3);
-Node fourth = new Node(4);
-Node fifth = new Node(5);
+                    Node first =new Node(1);
+                    Node second = new Node(2);
+                    Node third = new Node(3);
+                    Node fourth = new Node(4);
+                    Node fifth = new Node(5);
 root=first;
 first.left=second;
 first.right=third;
