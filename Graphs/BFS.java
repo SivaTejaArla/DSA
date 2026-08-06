@@ -1,3 +1,32 @@
+/*
+=====================================================================================
+Need to store the graph
+    Initialize an ArrayList
+    Initialize internal ArrayLists based on no of nodes using the constructor
+Make the connections
+    Create a method like 'addEdge'
+    Using a.get(from).add(to) make an edge
+    If its non directional graph a.get(to).add(from)
+=======================================================================================
+Now BFS Traversal 
+Initialize a Queue using LinkedList<>() . If we need to specify queue size use ArrayDeque<>()
+Initialise a visitedSet using HashSet so that it won't store duplicates.
+
+    Add starting node to queue using 'offer' method.
+    Loop based on !Queue.isEmpty()
+        Get CurrentNode with 'poll' method.
+        Print CurrentNode
+        Loop CurrentNode List for neighbours
+            Check !visited.contains(neighbor)
+                Add neighbours to visitedSet                             visited.add(neighbor); 
+                Add neighbours to Queue                                  q.offer(neighbor);  
+    
+    
+=======================================================================================        
+*/
+
+
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
