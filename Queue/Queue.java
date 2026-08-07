@@ -26,7 +26,6 @@ void Enqueue(int data){
     }
     rear=newNode;
 }
-
 void dequeue(){
     if(front == null){
         System.out.println("Empty Queue");
