@@ -14,7 +14,6 @@ this.data=data;
 
     }
 }
-
 void Enqueue(int data){
     Node newNode =new Node(data);
     if(front == null){
