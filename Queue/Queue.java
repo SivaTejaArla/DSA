@@ -25,7 +25,6 @@ void Enqueue(int data){
         rear.next=newNode;
     }
     rear=newNode;
-
 }
 
 void dequeue(){
