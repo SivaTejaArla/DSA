@@ -16,6 +16,7 @@
  *                            .boxed()
  *                            .toList();
  *
+ * 
  * Iterator<Integer> it = list.iterator();
  *
  * Cursor Position:
@@ -24,6 +25,7 @@
  * Iterator starts before the first element.
  *
  * while(it.hasNext()) {
+ * 
  *     System.out.println(it.next());
  * }
  *
