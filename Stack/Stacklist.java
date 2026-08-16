@@ -11,7 +11,6 @@ private class Node{
         this.data=data;
     }
 }
- 
 void push(int data){
     Node newNode=new Node(data);
     newNode.next=top;
