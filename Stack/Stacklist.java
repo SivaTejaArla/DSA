@@ -1,5 +1,4 @@
 package Stack;
-
 public class Stacklist {
 
     private Node top;
