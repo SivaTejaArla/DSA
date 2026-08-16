@@ -26,7 +26,6 @@ void pop(){
     length--;
     System.out.println("Popped : "+result);
 }
-
     public static void main(String args[]){
 Stacklist l=new Stacklist();
 l.push(5);
