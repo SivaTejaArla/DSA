@@ -1,7 +1,6 @@
 package Stack;
 
 public class Stacklist {
-    
 
     private Node top;
     private int length =0;
